@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-card">
+
+    <div class="top-actions">
+        <button onclick="window.location.href='/admin-dashboard'">← Back</button>
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+
+    <h2>🛡 Admin Profile</h2>
+
+    <div class="profile-card admin-card">
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Role:</strong> <span id="profileRole"></span></p>
+    </div>
+
+    <div class="admin-panel">
+        <h3>Admin Privileges</h3>
+        <ul>
+            <li>Manage Users</li>
+            <li>Access Protected Admin Routes</li>
+            <li>Perform Administrative Actions</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    loadProfile();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-card">
+
+    <div class="top-actions">
+        <button onclick="window.location.href='/dashboard'">← Back</button>
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+
+    <h2>👤 User Profile</h2>
+
+    <div class="profile-card">
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Role:</strong> <span id="profileRole"></span></p>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    loadProfile();
+</script>
+
+</body>
+</html>

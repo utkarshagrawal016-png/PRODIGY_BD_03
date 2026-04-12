@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+
+        <div class="top-actions">
+            <button onclick="window.location.href='/dashboard'">← User Panel</button>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+
+        <h2>🛡 Admin Dashboard</h2>
+
+        <p>Welcome, Administrator.</p>
+
+        <button onclick="adminOnly()">Verify Admin Access</button>
+
+        <div class="admin-panel">
+            <h3>Admin Controls</h3>
+            <button onclick="window.location.href='/admin-profile'">
+                👨‍💼 View Admin Profile
+            </button>
+            <p>More admin functions can be added here later.</p>
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
